@@ -11,7 +11,7 @@
  Target Server Version : 50727
  File Encoding         : 65001
 
- Date: 15/10/2019 16:15:43
+ Date: 15/10/2019 16:33:49
 */
 
 SET NAMES utf8mb4;
@@ -23,8 +23,9 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `address`;
 CREATE TABLE `address` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `address` varchar(255) DEFAULT NULL COMMENT '地址',
+  `is_delete` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -45,25 +46,28 @@ CREATE TABLE `admin` (
 -- ----------------------------
 DROP TABLE IF EXISTS `goods`;
 CREATE TABLE `goods` (
-  `id` int(11) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `img` varchar(255) DEFAULT NULL,
-  `introduce` varchar(255) DEFAULT NULL,
-  `price` decimal(10,2) DEFAULT NULL,
-  `content` text
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '商品名',
+  `img` varchar(255) DEFAULT NULL COMMENT '图片',
+  `introduce` varchar(255) DEFAULT NULL COMMENT '介绍',
+  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `content` text COMMENT '详情',
+  `is_delete` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for order
+-- Table structure for orders
 -- ----------------------------
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE `order` (
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL COMMENT '用户ID',
   `goods_id` int(11) DEFAULT NULL COMMENT '商品ID',
   `quantity` varchar(255) DEFAULT NULL COMMENT '数量',
   `total` varchar(255) DEFAULT NULL COMMENT '总价',
   `status` int(255) DEFAULT NULL COMMENT '状态',
+  `is_delete` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -73,9 +77,10 @@ CREATE TABLE `order` (
 DROP TABLE IF EXISTS `shop_car`;
 CREATE TABLE `shop_car` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `goods_id` int(11) DEFAULT NULL,
-  `quantity` int(255) DEFAULT NULL,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `goods_id` int(11) DEFAULT NULL COMMENT '商品ID',
+  `quantity` int(255) DEFAULT NULL COMMENT '数量',
+  `is_delete` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -104,6 +109,7 @@ CREATE TABLE `user` (
   `birthday` varchar(255) DEFAULT NULL,
   `sex` varchar(255) DEFAULT NULL,
   `avatar` varchar(255) DEFAULT NULL,
+  `is_delete` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

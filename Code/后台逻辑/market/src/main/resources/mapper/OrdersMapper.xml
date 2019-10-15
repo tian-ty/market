@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiany.market.dao.OrdersMapper">
+  <resultMap id="BaseResultMap" type="com.tiany.market.entity.Orders">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="user_id" />
+    <result column="goods_id" jdbcType="INTEGER" property="goods_id" />
+    <result column="quantity" jdbcType="VARCHAR" property="quantity" />
+    <result column="total" jdbcType="VARCHAR" property="total" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="is_delete" jdbcType="INTEGER" property="is_delete" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    id, user_id, goods_id, quantity, total, `status`, is_delete
+  </sql>
+  <select id="selectByExample" parameterType="com.tiany.market.entity.OrdersExample" resultMap="BaseResultMap">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from `orders`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from `orders`
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKeyWithLogicalDelete" parameterType="map" resultMap="BaseResultMap">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from `orders`
+    where id = #{id,jdbcType=INTEGER}
+      and is_delete = 
+    <choose>
+      <when test="andLogicalDeleted">
+        1
+      </when>
+      <otherwise>
+        0
+      </otherwise>
+    </choose>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    delete from `orders`
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tiany.market.entity.OrdersExample">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    delete from `orders`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.tiany.market.entity.Orders">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into `orders` (user_id, goods_id, quantity, 
+      total, `status`, is_delete
+      )
+    values (#{user_id,jdbcType=INTEGER}, #{goods_id,jdbcType=INTEGER}, #{quantity,jdbcType=VARCHAR}, 
+      #{total,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{is_delete,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tiany.market.entity.Orders">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into `orders`
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="user_id != null">
+        user_id,
+      </if>
+      <if test="goods_id != null">
+        goods_id,
+      </if>
+      <if test="quantity != null">
+        quantity,
+      </if>
+      <if test="total != null">
+        total,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="is_delete != null">
+        is_delete,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="user_id != null">
+        #{user_id,jdbcType=INTEGER},
+      </if>
+      <if test="goods_id != null">
+        #{goods_id,jdbcType=INTEGER},
+      </if>
+      <if test="quantity != null">
+        #{quantity,jdbcType=VARCHAR},
+      </if>
+      <if test="total != null">
+        #{total,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="is_delete != null">
+        #{is_delete,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.tiany.market.entity.OrdersExample" resultType="java.lang.Long">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    select count(*) from `orders`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    update `orders`
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.user_id != null">
+        user_id = #{record.user_id,jdbcType=INTEGER},
+      </if>
+      <if test="record.goods_id != null">
+        goods_id = #{record.goods_id,jdbcType=INTEGER},
+      </if>
+      <if test="record.quantity != null">
+        quantity = #{record.quantity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.total != null">
+        total = #{record.total,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.is_delete != null">
+        is_delete = #{record.is_delete,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    update `orders`
+    set id = #{record.id,jdbcType=INTEGER},
+      user_id = #{record.user_id,jdbcType=INTEGER},
+      goods_id = #{record.goods_id,jdbcType=INTEGER},
+      quantity = #{record.quantity,jdbcType=VARCHAR},
+      total = #{record.total,jdbcType=VARCHAR},
+      `status` = #{record.status,jdbcType=INTEGER},
+      is_delete = #{record.is_delete,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiany.market.entity.Orders">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    update `orders`
+    <set>
+      <if test="user_id != null">
+        user_id = #{user_id,jdbcType=INTEGER},
+      </if>
+      <if test="goods_id != null">
+        goods_id = #{goods_id,jdbcType=INTEGER},
+      </if>
+      <if test="quantity != null">
+        quantity = #{quantity,jdbcType=VARCHAR},
+      </if>
+      <if test="total != null">
+        total = #{total,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="is_delete != null">
+        is_delete = #{is_delete,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tiany.market.entity.Orders">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    update `orders`
+    set user_id = #{user_id,jdbcType=INTEGER},
+      goods_id = #{goods_id,jdbcType=INTEGER},
+      quantity = #{quantity,jdbcType=VARCHAR},
+      total = #{total,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=INTEGER},
+      is_delete = #{is_delete,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="logicalDeleteByExample" parameterType="map">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    update `orders` set is_delete = 1
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="logicalDeleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    update `orders` set is_delete = 1
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <insert id="batchInsert" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    insert into `orders`
+    (user_id, goods_id, quantity, total, `status`, is_delete)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.user_id,jdbcType=INTEGER}, #{item.goods_id,jdbcType=INTEGER}, #{item.quantity,jdbcType=VARCHAR}, 
+        #{item.total,jdbcType=VARCHAR}, #{item.status,jdbcType=INTEGER}, #{item.is_delete,jdbcType=INTEGER}
+        )
+    </foreach>
+  </insert>
+  <insert id="batchInsertSelective" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    insert into `orders` (
+    <foreach collection="selective" item="column" separator=",">
+      ${column.escapedColumnName}
+    </foreach>
+    )
+    values
+    <foreach collection="list" item="item" separator=",">
+      (
+      <foreach collection="selective" item="column" separator=",">
+        <if test="'user_id'.toString() == column.value">
+          #{item.user_id,jdbcType=INTEGER}
+        </if>
+        <if test="'goods_id'.toString() == column.value">
+          #{item.goods_id,jdbcType=INTEGER}
+        </if>
+        <if test="'quantity'.toString() == column.value">
+          #{item.quantity,jdbcType=VARCHAR}
+        </if>
+        <if test="'total'.toString() == column.value">
+          #{item.total,jdbcType=VARCHAR}
+        </if>
+        <if test="'status'.toString() == column.value">
+          #{item.status,jdbcType=INTEGER}
+        </if>
+        <if test="'is_delete'.toString() == column.value">
+          #{item.is_delete,jdbcType=INTEGER}
+        </if>
+      </foreach>
+      )
+    </foreach>
+  </insert>
+</mapper>
