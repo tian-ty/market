@@ -4,6 +4,6 @@ import com.tiany.market.entity.Admin;
 
 public interface AdminService {
 
-    Admin adminLogin(String username,String password);
+    Admin adminLogin(String username, String password);
 
 }

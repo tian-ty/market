@@ -6,29 +6,25 @@ import java.util.List;
 public class AdminExample {
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     protected String orderByClause;
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     protected boolean distinct;
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     protected List<Criteria> oredCriteria;
 
-    private Integer limit;
-
-    private Integer offset;
-
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public AdminExample() {
         oredCriteria = new ArrayList<Criteria>();
@@ -36,7 +32,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public void setOrderByClause(String orderByClause) {
         this.orderByClause = orderByClause;
@@ -44,7 +40,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public String getOrderByClause() {
         return orderByClause;
@@ -52,7 +48,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public void setDistinct(boolean distinct) {
         this.distinct = distinct;
@@ -60,7 +56,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public boolean isDistinct() {
         return distinct;
@@ -68,7 +64,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public List<Criteria> getOredCriteria() {
         return oredCriteria;
@@ -76,7 +72,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public void or(Criteria criteria) {
         oredCriteria.add(criteria);
@@ -84,7 +80,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public Criteria or() {
         Criteria criteria = createCriteriaInternal();
@@ -94,7 +90,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public AdminExample orderBy(String orderByClause) {
         this.setOrderByClause(orderByClause);
@@ -103,7 +99,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public AdminExample orderBy(String ... orderByClauses) {
         StringBuffer sb = new StringBuffer();
@@ -119,7 +115,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public Criteria createCriteria() {
         Criteria criteria = createCriteriaInternal();
@@ -131,7 +127,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     protected Criteria createCriteriaInternal() {
         Criteria criteria = new Criteria(this);
@@ -140,7 +136,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public void clear() {
         oredCriteria.clear();
@@ -148,32 +144,9 @@ public class AdminExample {
         distinct = false;
     }
 
-    public void setLimit(Integer limit) {
-        this.limit = limit;
-    }
-
-    public Integer getLimit() {
-        return limit;
-    }
-
-    public void setOffset(Integer offset) {
-        this.offset = offset;
-    }
-
-    public Integer getOffset() {
-        return offset;
-    }
-
-    public void setPageInfo(Integer currentPage, Integer pageSize) {
-        if(pageSize<1) throw new IllegalArgumentException("页大小不能小于1！");
-        this.limit=pageSize;
-        if(currentPage<1) throw new IllegalArgumentException("页数不能小于1！");
-        this.offset=(currentPage-1)*pageSize;
-    }
-
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public static Criteria newAndCreateCriteria() {
         AdminExample example = new AdminExample();
@@ -182,7 +155,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
@@ -242,7 +215,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andIdEqualToColumn(Admin.Column column) {
             addCriterion(new StringBuilder("id = ").append(column.getEscapedColumnName()).toString());
@@ -256,7 +229,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andIdNotEqualToColumn(Admin.Column column) {
             addCriterion(new StringBuilder("id <> ").append(column.getEscapedColumnName()).toString());
@@ -270,7 +243,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andIdGreaterThanColumn(Admin.Column column) {
             addCriterion(new StringBuilder("id > ").append(column.getEscapedColumnName()).toString());
@@ -284,7 +257,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andIdGreaterThanOrEqualToColumn(Admin.Column column) {
             addCriterion(new StringBuilder("id >= ").append(column.getEscapedColumnName()).toString());
@@ -298,7 +271,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andIdLessThanColumn(Admin.Column column) {
             addCriterion(new StringBuilder("id < ").append(column.getEscapedColumnName()).toString());
@@ -312,7 +285,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andIdLessThanOrEqualToColumn(Admin.Column column) {
             addCriterion(new StringBuilder("id <= ").append(column.getEscapedColumnName()).toString());
@@ -339,251 +312,251 @@ public class AdminExample {
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeIsNull() {
-            addCriterion("usernmae is null");
+        public Criteria andUsernameIsNull() {
+            addCriterion("username is null");
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeIsNotNull() {
-            addCriterion("usernmae is not null");
+        public Criteria andUsernameIsNotNull() {
+            addCriterion("username is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeEqualTo(String value) {
-            addCriterion("usernmae =", value, "usernmae");
-            return (Criteria) this;
-        }
-
-        /**
-         *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
-         */
-        public Criteria andUsernmaeEqualToColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("usernmae = ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andUsernmaeNotEqualTo(String value) {
-            addCriterion("usernmae <>", value, "usernmae");
+        public Criteria andUsernameEqualTo(String value) {
+            addCriterion("username =", value, "username");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
-        public Criteria andUsernmaeNotEqualToColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("usernmae <> ").append(column.getEscapedColumnName()).toString());
+        public Criteria andUsernameEqualToColumn(Admin.Column column) {
+            addCriterion(new StringBuilder("username = ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeGreaterThan(String value) {
-            addCriterion("usernmae >", value, "usernmae");
+        public Criteria andUsernameNotEqualTo(String value) {
+            addCriterion("username <>", value, "username");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
-        public Criteria andUsernmaeGreaterThanColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("usernmae > ").append(column.getEscapedColumnName()).toString());
+        public Criteria andUsernameNotEqualToColumn(Admin.Column column) {
+            addCriterion(new StringBuilder("username <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeGreaterThanOrEqualTo(String value) {
-            addCriterion("usernmae >=", value, "usernmae");
+        public Criteria andUsernameGreaterThan(String value) {
+            addCriterion("username >", value, "username");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
-        public Criteria andUsernmaeGreaterThanOrEqualToColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("usernmae >= ").append(column.getEscapedColumnName()).toString());
+        public Criteria andUsernameGreaterThanColumn(Admin.Column column) {
+            addCriterion(new StringBuilder("username > ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeLessThan(String value) {
-            addCriterion("usernmae <", value, "usernmae");
+        public Criteria andUsernameGreaterThanOrEqualTo(String value) {
+            addCriterion("username >=", value, "username");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
-        public Criteria andUsernmaeLessThanColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("usernmae < ").append(column.getEscapedColumnName()).toString());
+        public Criteria andUsernameGreaterThanOrEqualToColumn(Admin.Column column) {
+            addCriterion(new StringBuilder("username >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeLessThanOrEqualTo(String value) {
-            addCriterion("usernmae <=", value, "usernmae");
+        public Criteria andUsernameLessThan(String value) {
+            addCriterion("username <", value, "username");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
-        public Criteria andUsernmaeLessThanOrEqualToColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("usernmae <= ").append(column.getEscapedColumnName()).toString());
+        public Criteria andUsernameLessThanColumn(Admin.Column column) {
+            addCriterion(new StringBuilder("username < ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeLike(String value) {
-            addCriterion("usernmae like", value, "usernmae");
+        public Criteria andUsernameLessThanOrEqualTo(String value) {
+            addCriterion("username <=", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeNotLike(String value) {
-            addCriterion("usernmae not like", value, "usernmae");
+        /**
+         *
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
+         */
+        public Criteria andUsernameLessThanOrEqualToColumn(Admin.Column column) {
+            addCriterion(new StringBuilder("username <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeIn(List<String> values) {
-            addCriterion("usernmae in", values, "usernmae");
+        public Criteria andUsernameLike(String value) {
+            addCriterion("username like", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeNotIn(List<String> values) {
-            addCriterion("usernmae not in", values, "usernmae");
+        public Criteria andUsernameNotLike(String value) {
+            addCriterion("username not like", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeBetween(String value1, String value2) {
-            addCriterion("usernmae between", value1, value2, "usernmae");
+        public Criteria andUsernameIn(List<String> values) {
+            addCriterion("username in", values, "username");
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeNotBetween(String value1, String value2) {
-            addCriterion("usernmae not between", value1, value2, "usernmae");
+        public Criteria andUsernameNotIn(List<String> values) {
+            addCriterion("username not in", values, "username");
+            return (Criteria) this;
+        }
+
+        public Criteria andUsernameBetween(String value1, String value2) {
+            addCriterion("username between", value1, value2, "username");
+            return (Criteria) this;
+        }
+
+        public Criteria andUsernameNotBetween(String value1, String value2) {
+            addCriterion("username not between", value1, value2, "username");
             return (Criteria) this;
         }
 
         public Criteria andPasswordIsNull() {
-            addCriterion("`password` is null");
+            addCriterion("password is null");
             return (Criteria) this;
         }
 
         public Criteria andPasswordIsNotNull() {
-            addCriterion("`password` is not null");
+            addCriterion("password is not null");
             return (Criteria) this;
         }
 
         public Criteria andPasswordEqualTo(String value) {
-            addCriterion("`password` =", value, "password");
+            addCriterion("password =", value, "password");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andPasswordEqualToColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("`password` = ").append(column.getEscapedColumnName()).toString());
+            addCriterion(new StringBuilder("password = ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
         public Criteria andPasswordNotEqualTo(String value) {
-            addCriterion("`password` <>", value, "password");
+            addCriterion("password <>", value, "password");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andPasswordNotEqualToColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("`password` <> ").append(column.getEscapedColumnName()).toString());
+            addCriterion(new StringBuilder("password <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
         public Criteria andPasswordGreaterThan(String value) {
-            addCriterion("`password` >", value, "password");
+            addCriterion("password >", value, "password");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andPasswordGreaterThanColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("`password` > ").append(column.getEscapedColumnName()).toString());
+            addCriterion(new StringBuilder("password > ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
         public Criteria andPasswordGreaterThanOrEqualTo(String value) {
-            addCriterion("`password` >=", value, "password");
+            addCriterion("password >=", value, "password");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andPasswordGreaterThanOrEqualToColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("`password` >= ").append(column.getEscapedColumnName()).toString());
+            addCriterion(new StringBuilder("password >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
         public Criteria andPasswordLessThan(String value) {
-            addCriterion("`password` <", value, "password");
+            addCriterion("password <", value, "password");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andPasswordLessThanColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("`password` < ").append(column.getEscapedColumnName()).toString());
+            addCriterion(new StringBuilder("password < ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
         public Criteria andPasswordLessThanOrEqualTo(String value) {
-            addCriterion("`password` <=", value, "password");
+            addCriterion("password <=", value, "password");
             return (Criteria) this;
         }
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andPasswordLessThanOrEqualToColumn(Admin.Column column) {
-            addCriterion(new StringBuilder("`password` <= ").append(column.getEscapedColumnName()).toString());
+            addCriterion(new StringBuilder("password <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
         public Criteria andPasswordLike(String value) {
-            addCriterion("`password` like", value, "password");
+            addCriterion("password like", value, "password");
             return (Criteria) this;
         }
 
         public Criteria andPasswordNotLike(String value) {
-            addCriterion("`password` not like", value, "password");
+            addCriterion("password not like", value, "password");
             return (Criteria) this;
         }
 
         public Criteria andPasswordIn(List<String> values) {
-            addCriterion("`password` in", values, "password");
+            addCriterion("password in", values, "password");
             return (Criteria) this;
         }
 
         public Criteria andPasswordNotIn(List<String> values) {
-            addCriterion("`password` not in", values, "password");
+            addCriterion("password not in", values, "password");
             return (Criteria) this;
         }
 
         public Criteria andPasswordBetween(String value1, String value2) {
-            addCriterion("`password` between", value1, value2, "password");
+            addCriterion("password between", value1, value2, "password");
             return (Criteria) this;
         }
 
         public Criteria andPasswordNotBetween(String value1, String value2) {
-            addCriterion("`password` not between", value1, value2, "password");
+            addCriterion("password not between", value1, value2, "password");
             return (Criteria) this;
         }
 
@@ -604,7 +577,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andNicknameEqualToColumn(Admin.Column column) {
             addCriterion(new StringBuilder("nickname = ").append(column.getEscapedColumnName()).toString());
@@ -618,7 +591,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andNicknameNotEqualToColumn(Admin.Column column) {
             addCriterion(new StringBuilder("nickname <> ").append(column.getEscapedColumnName()).toString());
@@ -632,7 +605,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andNicknameGreaterThanColumn(Admin.Column column) {
             addCriterion(new StringBuilder("nickname > ").append(column.getEscapedColumnName()).toString());
@@ -646,7 +619,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andNicknameGreaterThanOrEqualToColumn(Admin.Column column) {
             addCriterion(new StringBuilder("nickname >= ").append(column.getEscapedColumnName()).toString());
@@ -660,7 +633,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andNicknameLessThanColumn(Admin.Column column) {
             addCriterion(new StringBuilder("nickname < ").append(column.getEscapedColumnName()).toString());
@@ -674,7 +647,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andNicknameLessThanOrEqualToColumn(Admin.Column column) {
             addCriterion(new StringBuilder("nickname <= ").append(column.getEscapedColumnName()).toString());
@@ -711,13 +684,13 @@ public class AdminExample {
             return (Criteria) this;
         }
 
-        public Criteria andUsernmaeLikeInsensitive(String value) {
-            addCriterion("upper(usernmae) like", value.toUpperCase(), "usernmae");
+        public Criteria andUsernameLikeInsensitive(String value) {
+            addCriterion("upper(username) like", value.toUpperCase(), "username");
             return (Criteria) this;
         }
 
         public Criteria andPasswordLikeInsensitive(String value) {
-            addCriterion("upper(`password`) like", value.toUpperCase(), "password");
+            addCriterion("upper(password) like", value.toUpperCase(), "password");
             return (Criteria) this;
         }
 
@@ -729,18 +702,18 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated do_not_delete_during_merge Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated do_not_delete_during_merge Wed Oct 16 10:41:15 CST 2019
      */
     public static class Criteria extends GeneratedCriteria {
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         private AdminExample example;
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         protected Criteria(AdminExample example) {
             super();
@@ -749,7 +722,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public AdminExample example() {
             return this.example;
@@ -757,7 +730,7 @@ public class AdminExample {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public Criteria andIf(boolean ifAdd, ICriteriaAdd add) {
             if (ifAdd) {
@@ -769,7 +742,7 @@ public class AdminExample {
         public interface ICriteriaAdd {
             /**
              *
-             * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+             * @mbg.generated Wed Oct 16 10:41:15 CST 2019
              */
             Criteria add(Criteria add);
         }
@@ -777,7 +750,7 @@ public class AdminExample {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public static class Criterion {
         private String condition;

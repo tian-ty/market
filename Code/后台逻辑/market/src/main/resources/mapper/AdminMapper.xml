@@ -3,16 +3,16 @@
 <mapper namespace="com.tiany.market.dao.AdminMapper">
   <resultMap id="BaseResultMap" type="com.tiany.market.entity.Admin">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="usernmae" jdbcType="VARCHAR" property="usernmae" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="nickname" jdbcType="VARCHAR" property="nickname" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -44,7 +44,7 @@
   </sql>
   <sql id="Update_By_Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
@@ -76,94 +76,86 @@
   </sql>
   <sql id="Base_Column_List">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    id, usernmae, `password`, nickname
+    id, username, password, nickname
   </sql>
   <select id="selectByExample" parameterType="com.tiany.market.entity.AdminExample" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from `admin`
+    from admin
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
-    <if test="limit != null">
-      <if test="offset != null">
-        limit ${offset}, ${limit}
-      </if>
-      <if test="offset == null">
-        limit ${limit}
-      </if>
-    </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
     select 
     <include refid="Base_Column_List" />
-    from `admin`
+    from admin
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    delete from `admin`
+    delete from admin
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.tiany.market.entity.AdminExample">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    delete from `admin`
+    delete from admin
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" parameterType="com.tiany.market.entity.Admin">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into `admin` (usernmae, `password`, nickname
+    insert into admin (username, password, nickname
       )
-    values (#{usernmae,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}
+    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.tiany.market.entity.Admin">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into `admin`
+    insert into admin
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="usernmae != null">
-        usernmae,
+      <if test="username != null">
+        username,
       </if>
       <if test="password != null">
-        `password`,
+        password,
       </if>
       <if test="nickname != null">
         nickname,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="usernmae != null">
-        #{usernmae,jdbcType=VARCHAR},
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
       </if>
       <if test="password != null">
         #{password,jdbcType=VARCHAR},
@@ -175,27 +167,27 @@
   </insert>
   <select id="countByExample" parameterType="com.tiany.market.entity.AdminExample" resultType="java.lang.Long">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    select count(*) from `admin`
+    select count(*) from admin
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    update `admin`
+    update admin
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.usernmae != null">
-        usernmae = #{record.usernmae,jdbcType=VARCHAR},
+      <if test="record.username != null">
+        username = #{record.username,jdbcType=VARCHAR},
       </if>
       <if test="record.password != null">
-        `password` = #{record.password,jdbcType=VARCHAR},
+        password = #{record.password,jdbcType=VARCHAR},
       </if>
       <if test="record.nickname != null">
         nickname = #{record.nickname,jdbcType=VARCHAR},
@@ -207,12 +199,12 @@
   </update>
   <update id="updateByExample" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    update `admin`
+    update admin
     set id = #{record.id,jdbcType=INTEGER},
-      usernmae = #{record.usernmae,jdbcType=VARCHAR},
-      `password` = #{record.password,jdbcType=VARCHAR},
+      username = #{record.username,jdbcType=VARCHAR},
+      password = #{record.password,jdbcType=VARCHAR},
       nickname = #{record.nickname,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -220,15 +212,15 @@
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.tiany.market.entity.Admin">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    update `admin`
+    update admin
     <set>
-      <if test="usernmae != null">
-        usernmae = #{usernmae,jdbcType=VARCHAR},
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
       </if>
       <if test="password != null">
-        `password` = #{password,jdbcType=VARCHAR},
+        password = #{password,jdbcType=VARCHAR},
       </if>
       <if test="nickname != null">
         nickname = #{nickname,jdbcType=VARCHAR},
@@ -238,31 +230,31 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tiany.market.entity.Admin">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    update `admin`
-    set usernmae = #{usernmae,jdbcType=VARCHAR},
-      `password` = #{password,jdbcType=VARCHAR},
+    update admin
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
       nickname = #{nickname,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <insert id="batchInsert" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    insert into `admin`
-    (usernmae, `password`, nickname)
+    insert into admin
+    (username, password, nickname)
     values
     <foreach collection="list" item="item" separator=",">
-      (#{item.usernmae,jdbcType=VARCHAR}, #{item.password,jdbcType=VARCHAR}, #{item.nickname,jdbcType=VARCHAR}
+      (#{item.username,jdbcType=VARCHAR}, #{item.password,jdbcType=VARCHAR}, #{item.nickname,jdbcType=VARCHAR}
         )
     </foreach>
   </insert>
   <insert id="batchInsertSelective" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Oct 15 16:35:42 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Wed Oct 16 10:41:15 CST 2019. by MyBatis Generator, do not modify.
     -->
-    insert into `admin` (
+    insert into admin (
     <foreach collection="selective" item="column" separator=",">
       ${column.escapedColumnName}
     </foreach>
@@ -271,8 +263,8 @@
     <foreach collection="list" item="item" separator=",">
       (
       <foreach collection="selective" item="column" separator=",">
-        <if test="'usernmae'.toString() == column.value">
-          #{item.usernmae,jdbcType=VARCHAR}
+        <if test="'username'.toString() == column.value">
+          #{item.username,jdbcType=VARCHAR}
         </if>
         <if test="'password'.toString() == column.value">
           #{item.password,jdbcType=VARCHAR}

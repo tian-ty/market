@@ -15,34 +15,34 @@ public class Admin implements Serializable {
     /**
      *
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     private Integer id;
 
     /**
      *
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
-    private String usernmae;
+    private String username;
 
     /**
      *
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     private String password;
 
     /**
      *
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     private String nickname;
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     private static final long serialVersionUID = 1L;
 
@@ -51,7 +51,7 @@ public class Admin implements Serializable {
      *
      * @return the value of market..admin.id
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public Integer getId() {
         return id;
@@ -59,7 +59,7 @@ public class Admin implements Serializable {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public Admin withId(Integer id) {
         this.setId(id);
@@ -71,41 +71,41 @@ public class Admin implements Serializable {
      *
      * @param id the value for market..admin.id
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * This method returns the value of the database column market..admin.usernmae
+     * This method returns the value of the database column market..admin.username
      *
-     * @return the value of market..admin.usernmae
+     * @return the value of market..admin.username
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
-    public String getUsernmae() {
-        return usernmae;
+    public String getUsername() {
+        return username;
     }
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
-    public Admin withUsernmae(String usernmae) {
-        this.setUsernmae(usernmae);
+    public Admin withUsername(String username) {
+        this.setUsername(username);
         return this;
     }
 
     /**
-     * This method sets the value of the database column market..admin.usernmae
+     * This method sets the value of the database column market..admin.username
      *
-     * @param usernmae the value for market..admin.usernmae
+     * @param username the value for market..admin.username
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
-    public void setUsernmae(String usernmae) {
-        this.usernmae = usernmae == null ? null : usernmae.trim();
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
     /**
@@ -113,7 +113,7 @@ public class Admin implements Serializable {
      *
      * @return the value of market..admin.password
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public String getPassword() {
         return password;
@@ -121,7 +121,7 @@ public class Admin implements Serializable {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public Admin withPassword(String password) {
         this.setPassword(password);
@@ -133,7 +133,7 @@ public class Admin implements Serializable {
      *
      * @param password the value for market..admin.password
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
@@ -144,7 +144,7 @@ public class Admin implements Serializable {
      *
      * @return the value of market..admin.nickname
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public String getNickname() {
         return nickname;
@@ -152,7 +152,7 @@ public class Admin implements Serializable {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public Admin withNickname(String nickname) {
         this.setNickname(nickname);
@@ -164,7 +164,7 @@ public class Admin implements Serializable {
      *
      * @param nickname the value for market..admin.nickname
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public void setNickname(String nickname) {
         this.nickname = nickname == null ? null : nickname.trim();
@@ -172,7 +172,7 @@ public class Admin implements Serializable {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     @Override
     public String toString() {
@@ -181,7 +181,7 @@ public class Admin implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", usernmae=").append(usernmae);
+        sb.append(", username=").append(username);
         sb.append(", password=").append(password);
         sb.append(", nickname=").append(nickname);
         sb.append("]");
@@ -190,7 +190,7 @@ public class Admin implements Serializable {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     @Override
     public boolean equals(Object that) {
@@ -205,21 +205,21 @@ public class Admin implements Serializable {
         }
         Admin other = (Admin) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getUsernmae() == null ? other.getUsernmae() == null : this.getUsernmae().equals(other.getUsernmae()))
+            && (this.getUsername() == null ? other.getUsername() == null : this.getUsername().equals(other.getUsername()))
             && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))
             && (this.getNickname() == null ? other.getNickname() == null : this.getNickname().equals(other.getNickname()));
     }
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getUsernmae() == null) ? 0 : getUsernmae().hashCode());
+        result = prime * result + ((getUsername() == null) ? 0 : getUsername().hashCode());
         result = prime * result + ((getPassword() == null) ? 0 : getPassword().hashCode());
         result = prime * result + ((getNickname() == null) ? 0 : getNickname().hashCode());
         return result;
@@ -227,53 +227,53 @@ public class Admin implements Serializable {
 
     /**
      *
-     * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+     * @mbg.generated Wed Oct 16 10:41:15 CST 2019
      */
     public enum Column {
         id("id", "id", "INTEGER", false),
-        usernmae("usernmae", "usernmae", "VARCHAR", false),
-        password("password", "password", "VARCHAR", true),
+        username("username", "username", "VARCHAR", false),
+        password("password", "password", "VARCHAR", false),
         nickname("nickname", "nickname", "VARCHAR", false);
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
-        private static final String BEGINNING_DELIMITER = "`";
+        private static final String BEGINNING_DELIMITER = "\"";
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
-        private static final String ENDING_DELIMITER = "`";
+        private static final String ENDING_DELIMITER = "\"";
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         private final String column;
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         private final boolean isColumnNameDelimited;
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         private final String javaProperty;
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         private final String jdbcType;
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public String value() {
             return this.column;
@@ -281,7 +281,7 @@ public class Admin implements Serializable {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public String getValue() {
             return this.column;
@@ -289,7 +289,7 @@ public class Admin implements Serializable {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public String getJavaProperty() {
             return this.javaProperty;
@@ -297,7 +297,7 @@ public class Admin implements Serializable {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public String getJdbcType() {
             return this.jdbcType;
@@ -305,7 +305,7 @@ public class Admin implements Serializable {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         Column(String column, String javaProperty, String jdbcType, boolean isColumnNameDelimited) {
             this.column = column;
@@ -316,7 +316,7 @@ public class Admin implements Serializable {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public String desc() {
             return this.getEscapedColumnName() + " DESC";
@@ -324,7 +324,7 @@ public class Admin implements Serializable {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public String asc() {
             return this.getEscapedColumnName() + " ASC";
@@ -332,7 +332,7 @@ public class Admin implements Serializable {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public static Column[] excludes(Column ... excludes) {
             ArrayList<Column> columns = new ArrayList<>(Arrays.asList(Column.values()));
@@ -344,7 +344,7 @@ public class Admin implements Serializable {
 
         /**
          *
-         * @mbg.generated Tue Oct 15 16:35:42 CST 2019
+         * @mbg.generated Wed Oct 16 10:41:15 CST 2019
          */
         public String getEscapedColumnName() {
             if (this.isColumnNameDelimited) {

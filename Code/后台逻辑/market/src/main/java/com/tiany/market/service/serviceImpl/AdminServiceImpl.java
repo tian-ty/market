@@ -18,7 +18,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public Admin adminLogin(String username, String password) {
         AdminExample example = new AdminExample();
-        example.createCriteria().andUsernmaeEqualTo(username).andPasswordEqualTo(password);
+        example.createCriteria().andUsernameEqualTo(username).andPasswordEqualTo(password);
         List<Admin> adminList = adminMapper.selectByExample(example);
         if (adminList != null && adminList.size()>0)
         {
